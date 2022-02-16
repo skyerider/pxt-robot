@@ -277,13 +277,13 @@ namespace RobotBit {
     
 
 
-    //% blockId=RobotBit_MotorRunDual block="直流电机编号 %motor1 转动速度 %speed1| 编号%motor2 转动速度 %speed2"
+    //% blockId=RobotBit_MotorRunDual block="直流电机|编号 %motor1 转动速度 %speed1|编号 %motor2 转动速度 %speed2"
     //% group="直流电机"
     //% weight=92
-    //% blockGap=50
+    //% blockGap=10
     //% speed1.min=-255 speed1.max=255
     //% speed2.min=-255 speed2.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=20
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=40
     export function MotorRunDual(motor1: enMotors, speed1: number, motor2: enMotors, speed2: number): void {
         MotorRun(motor1, speed1);
         MotorRun(motor2, speed2);
