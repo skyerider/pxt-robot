@@ -1,4 +1,4 @@
-//% color="#FF5733" weight=20 icon="\uf085" block="创之翼机器人"
+//% color="#0066CC" weight=20 icon="\uf17b" block="创之翼机器人"
 //% category="创之翼机器人"
 namespace RobotBit {
 
@@ -174,7 +174,7 @@ namespace RobotBit {
     }
     
     //% blockId=RobotBit_Servo block="Servo(180°)|num %num|value %value"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=97
     //% blockGap=10
     //% num.min=1 num.max=4 value.min=0 value.max=180
@@ -189,7 +189,7 @@ namespace RobotBit {
     }
 
     //% blockId=RobotBit_Servo2 block="Servo(270°)|num %num|value %value"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=96
     //% blockGap=10
     //% num.min=1 num.max=4 value.min=0 value.max=270
@@ -205,7 +205,7 @@ namespace RobotBit {
     }
 
     //% blockId=RobotBit_Servo3 block="Servo(360°)|num %num|pos %pos|value %value"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=96
     //% blockGap=10
     //% num.min=1 num.max=4 value.min=0 value.max=90
@@ -234,7 +234,7 @@ namespace RobotBit {
 
     }
     //% blockId=RobotBit_MotorRun block="Motor|%index|speed(-255~255) %speed"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=93
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -278,7 +278,7 @@ namespace RobotBit {
 
 
     //% blockId=RobotBit_MotorRunDual block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=92
     //% blockGap=50
     //% speed1.min=-255 speed1.max=255
@@ -290,7 +290,7 @@ namespace RobotBit {
     }
 
     //% blockId=RobotBit_StepperDegree block="Stepper Motor(28BYJ-48) |%index|degree %degree"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=90
     export function StepperDegree(index: enSteppers, degree: number): void {
         if (!initialized) {
@@ -303,7 +303,7 @@ namespace RobotBit {
     }
 
     //% blockId=RobotBit_MotorStopAll block="Motor Stop All"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=91
     //% blockGap=50
     export function MotorStopAll(): void {
@@ -319,7 +319,7 @@ namespace RobotBit {
     }
 
     //% blockId=RobotBit_StepperTurn block="Stepper Motor(28BYJ-48) |%index|turn %turn|circle"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=89
     export function StepperTurn(index: enSteppers, turn: enTurns): void {
         let degree = turn;
@@ -327,7 +327,7 @@ namespace RobotBit {
     }
 
     //% blockId=RobotBit_StepperDual block="Dual Stepper Motor(Degree) |M1 %degree1| M2 %degree2"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=88
     export function StepperDual(degree1: number, degree2: number): void {
         if (!initialized) {
@@ -352,7 +352,7 @@ namespace RobotBit {
     }
 
     //% blockId=RobotBit_PWMOFF block="PWM OFF|%index"
-    //% subcategory="运动控制"
+    //% group="运动控制"
     //% weight=87
     export function PWMOFF(index: number): void {
         setPwm(index, 0, 0);
