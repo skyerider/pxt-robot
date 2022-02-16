@@ -206,7 +206,7 @@ namespace RobotBit {
 
     //% blockId=RobotBit_Servo3 block="连续旋转舵机(360°)|编号 %num|执行动作 %pos|速度 %value"
     //% group="运动控制"
-    //% weight=96
+    //% weight=95
     //% blockGap=10
     //% num.min=1 num.max=4 value.min=0 value.max=90
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=20
@@ -237,7 +237,7 @@ namespace RobotBit {
     //% group="运动控制"
     //% weight=93
     //% speed.min=-255 speed.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=20
     export function MotorRun(index: enMotors, speed: number): void {
         if (!initialized) {
             initPCA9685()
@@ -283,7 +283,7 @@ namespace RobotBit {
     //% blockGap=50
     //% speed1.min=-255 speed1.max=255
     //% speed2.min=-255 speed2.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=2
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=20
     export function MotorRunDual(motor1: enMotors, speed1: number, motor2: enMotors, speed2: number): void {
         MotorRun(motor1, speed1);
         MotorRun(motor2, speed2);
