@@ -41,11 +41,11 @@ namespace RobotBit {
         B2 = 0x2
     }
     export enum enPos { 
-        //% blockId="forward" block="forward"
+        //% blockId="forward" block="正转"
         forward = 1,
-        //% blockId="reverse" block="reverse"
+        //% blockId="reverse" block="反转"
         reverse = 2,
-        //% blockId="stop" block="stop"
+        //% blockId="stop" block="停止"
         stop = 3
     }
 
@@ -173,7 +173,7 @@ namespace RobotBit {
         setPwm(index + 1, 0, 0);
     }
     
-    //% blockId=RobotBit_Servo block="Servo(180°)|num %num|value %value"
+    //% blockId=RobotBit_Servo block="舵机(180°)|编号 %num|转到 %value 度位置"
     //% group="运动控制"
     //% weight=97
     //% blockGap=10
@@ -188,7 +188,7 @@ namespace RobotBit {
 
     }
 
-    //% blockId=RobotBit_Servo2 block="Servo(270°)|num %num|value %value"
+    //% blockId=RobotBit_Servo2 block="舵机(270°)|编号 %num|转到 %value 度位置"
     //% group="运动控制"
     //% weight=96
     //% blockGap=10
@@ -204,7 +204,7 @@ namespace RobotBit {
 
     }
 
-    //% blockId=RobotBit_Servo3 block="Servo(360°)|num %num|pos %pos|value %value"
+    //% blockId=RobotBit_Servo3 block="连续旋转舵机(360°)|编号 %num|执行动作 %pos|速度 %value"
     //% group="运动控制"
     //% weight=96
     //% blockGap=10
@@ -233,7 +233,7 @@ namespace RobotBit {
        
 
     }
-    //% blockId=RobotBit_MotorRun block="Motor|%index|speed(-255~255) %speed"
+    //% blockId=RobotBit_MotorRun block="直流电机编号|%index|以(-255~255) %speed 速度转动"
     //% group="运动控制"
     //% weight=93
     //% speed.min=-255 speed.max=255
@@ -277,7 +277,7 @@ namespace RobotBit {
     
 
 
-    //% blockId=RobotBit_MotorRunDual block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
+    //% blockId=RobotBit_MotorRunDual block="直流电机编号|%motor1|转动速度 %speed1|%motor2|转动速度 %speed2"
     //% group="运动控制"
     //% weight=92
     //% blockGap=50
@@ -289,7 +289,7 @@ namespace RobotBit {
         MotorRun(motor2, speed2);
     }
 
-    //% blockId=RobotBit_StepperDegree block="Stepper Motor(28BYJ-48) |%index|degree %degree"
+    //% blockId=RobotBit_StepperDegree block="步进电机(28BYJ-48) |%index|角度 %degree"
     //% group="运动控制"
     //% weight=90
     export function StepperDegree(index: enSteppers, degree: number): void {
@@ -302,7 +302,7 @@ namespace RobotBit {
         MotorStopAll()
     }
 
-    //% blockId=RobotBit_MotorStopAll block="Motor Stop All"
+    //% blockId=RobotBit_MotorStopAll block="停止全部直流电机"
     //% group="运动控制"
     //% weight=91
     //% blockGap=50
@@ -318,7 +318,7 @@ namespace RobotBit {
         
     }
 
-    //% blockId=RobotBit_StepperTurn block="Stepper Motor(28BYJ-48) |%index|turn %turn|circle"
+    //% blockId=RobotBit_StepperTurn block="步进电机(28BYJ-48) |%index|转 %turn|圈"
     //% group="运动控制"
     //% weight=89
     export function StepperTurn(index: enSteppers, turn: enTurns): void {
@@ -326,7 +326,7 @@ namespace RobotBit {
         StepperDegree(index, degree);
     }
 
-    //% blockId=RobotBit_StepperDual block="Dual Stepper Motor(Degree) |M1 %degree1| M2 %degree2"
+    //% blockId=RobotBit_StepperDual block="双步进电机(角度) |B1 %degree1| B2 %degree2"
     //% group="运动控制"
     //% weight=88
     export function StepperDual(degree1: number, degree2: number): void {
@@ -351,7 +351,7 @@ namespace RobotBit {
         MotorStopAll()
     }
 
-    //% blockId=RobotBit_PWMOFF block="PWM OFF|%index"
+    //% blockId=RobotBit_PWMOFF block="关闭PWM输出|%index"
     //% group="运动控制"
     //% weight=87
     export function PWMOFF(index: number): void {
