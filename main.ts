@@ -277,7 +277,7 @@ namespace RobotBit {
     
 
 
-    //% blockId=RobotBit_MotorRunDual block="直流电机|编号 %motor1 转动速度 %speed1|编号 %motor2 转动速度 %speed2"
+    //% blockId=RobotBit_MotorRunDual block="直流电机|编号 |%motor1| 转动速度 |%speed1|编号 |%motor2| 转动速度 |%speed2"
     //% group="直流电机"
     //% weight=92
     //% blockGap=10
